@@ -65,22 +65,4 @@ namespace WebInterceptors
             app.Run();
         }
     }
-
-    public class NotificationService
-    {
-        public virtual string Send(string message)
-        {
-            return $"Sending: {message}";
-        }
-    }
-
-    public class LoggingInterceptor : IInterceptor
-    {
-        public void Intercept(IInvocation invocation)
-        {
-            Console.WriteLine($"[LOG] Calling {invocation.Method.Name}");
-            invocation.Proceed();
-            Console.WriteLine($"[LOG] Finished {invocation.Method.Name}");
-        }
-    }
 }
