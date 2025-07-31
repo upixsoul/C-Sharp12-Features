@@ -1,0 +1,6 @@
+@WebInterceptors_HostAddress = http://localhost:5085
+
+GET {{WebInterceptors_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
