@@ -2,6 +2,7 @@
 
 namespace WebInterceptors
 {
+    // MethodInterceptor is used to intercept method calls on IReaderService
     public class MethodInterceptor : IInterceptor
     {
         public void Intercept(IInvocation invocation)

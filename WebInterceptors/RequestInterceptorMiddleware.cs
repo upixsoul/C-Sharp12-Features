@@ -1,6 +1,7 @@
 ﻿
 namespace WebInterceptors
 {
+    // This middleware intercepts HTTP requests and responses
     public class RequestInterceptorMiddleware
     {
         private readonly RequestDelegate _next;

@@ -12,6 +12,7 @@ namespace WebInterceptors
             // Add services to the container.
             builder.Services.AddAuthorization();
 
+            // MethodInterceptor is used to intercept method calls on IReaderService
             builder.Services.AddSingleton<IReaderService>(_ =>
             {
                 var proxyGenerator = new ProxyGenerator();
@@ -60,6 +61,7 @@ namespace WebInterceptors
             .WithName("GetWeatherForecast")
             .WithOpenApi();
 
+            //RequestInterceptorMiddleware is used to intercept HTTP requests
             app.UseMiddleware<RequestInterceptorMiddleware>();
 
             app.Run();
